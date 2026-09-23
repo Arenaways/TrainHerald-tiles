@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TrainHerald rail tiles</title>
+<style>
+  :root { --bg: #fafaf7; --fg: #1d1d1b; --muted: #6b6b66; --line: #deddd6; --accent: #0b6e4f; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #151514; --fg: #ecebe6; --muted: #a09f99; --line: #2e2e2b; --accent: #5cc49a; }
+  }
+  body { margin: 0; background: var(--bg); color: var(--fg); font: 16px/1.55 system-ui, sans-serif; }
+  main { max-width: 42rem; margin: 0 auto; padding: 3rem 1rem; }
+  h1 { font-size: 1.6rem; margin: 0 0 .25rem; }
+  p.lead { color: var(--muted); margin: 0 0 2rem; }
+  dl { display: grid; grid-template-columns: max-content 1fr; gap: .4rem 1.5rem; margin: 0 0 2rem; }
+  dt { color: var(--muted); }
+  dd { margin: 0; font-variant-numeric: tabular-nums; }
+  a { color: var(--accent); }
+  code { font: .9em ui-monospace, monospace; background: var(--line); padding: .1em .35em; border-radius: 4px; }
+  footer { border-top: 1px solid var(--line); margin-top: 2.5rem; padding-top: 1rem; color: var(--muted); font-size: .9rem; }
+</style>
+</head>
+<body>
+<main>
+  <h1>TrainHerald rail tiles</h1>
+  <p class="lead">The railway network from OpenStreetMap, cut into 0.25° × 0.25° tiles for
+  <a href="https://github.com/Arenaways/TrainHerald">TrainHerald</a>.</p>
+  <dl>
+    <dt>OpenStreetMap data of</dt><dd>2026-09-21</dd>
+    <dt>Tiles</dt><dd>10868</dd>
+    <dt>Total size</dt><dd>144.5 MB</dd>
+  </dl>
+  <p><a href="manifest.json"><code>manifest.json</code></a> lists every tile with a hash.
+  Tiles are at <code>rail/&lt;lat&gt;_&lt;lng&gt;.tile</code>, where <code>lat</code> and <code>lng</code> are the
+  degrees × 4, rounded down: Turin is <a href="rail/180_30.tile"><code>rail/180_30.tile</code></a>.</p>
+  <p>Published from <a href="https://github.com/arenaways/trainherald-tiles">github.com/arenaways/trainherald-tiles</a> with
+  <code>trainherald tiles publish</code>.</p>
+  <footer>Map data © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>,
+  available under the <a href="https://opendatacommons.org/licenses/odbl/1-0/">Open Database License</a>.</footer>
+</main>
+</body>
+</html>
